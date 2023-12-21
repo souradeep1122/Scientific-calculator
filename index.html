@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="full-body">
+      <div class="main">
+        <input  id="input">
+       
+        <div class="row-top" >
+          <div class="left-top" >
+            <a></a>
+            <a></a>
+          </div>
+          <div class="centre">
+            Replay
+          </div>
+          <div class="right-top" >
+            <a ></a>
+            <a></a>
+          </div>
+  
+        </div>
+        
+        <div id="row1" class="row2">
+          <div class="left">
+            <a>ab/c</a>
+            <a>√</a></div>
+          <div class="right">
+            
+          <a >x^2</a>
+          <a>^</a>
+         
+          </div>
+  
+        </div>
+        <div id="row1">
+          <a>ab/c</a>
+          <a>√</a>
+          <a>x^2</a>
+          <a  onclick="input.value += '^'"s>^</a>
+          <a>log</a>
+          <a>ln</a>
+        </div>
+        <div id="row1">
+          <a>(-)</a>
+          <a>.'"</a>
+          <a>hyp</a>
+          <a>sin</a>
+          <a>cos</a>
+          <a>tan</a>
+        </div>
+        <div id="row1">
+          <a>RCL</a>
+          <a>ENG</a> 
+          <a onclick="input.value += '('">(</a>
+          <a onclick="input.value += ')'">)</a>
+          <a>'</a>
+          <a>M+</a>
+        </div>
+        <div id="row">
+          <a onclick="input.value += '7'">7</a>
+          <a onclick="input.value += '8'">8</a>
+          <a onclick="input.value += '9'">9</a>
+          <a style="background-color: rgb(128, 46, 46);
+          border: 1px solidrgb(128, 46, 46);" onclick="input.value = input.value.toString().slice(0,-1)">DEL</a>
+          <a style="background-color: rgb(134, 50, 50);" onclick="input.value = ''">AC</a>
+        </div>
+        
+        <div id="row">
+          <a onclick="input.value += '4'">4</a>
+          <a onclick="input.value += '5'">5</a>
+          <a onclick="input.value += '6'">6</a>
+          <a onclick="input.value += '*'">*</a>
+          <a onclick="input.value += '/'">/</a>
+        </div>
+        <div id="row">
+          <a onclick="input.value += '1'">1</a>
+          <a onclick="input.value += '2'">2</a>
+          <a onclick="input.value += '3'">3</a>
+          <a onclick="input.value += '+'">+</a>
+          <a onclick="input.value += '-'">-</a>
+        </div>
+        <div id="row">
+          <a onclick="input.value += '0'">0</a>
+          <a onclick="input.value += '.'">.</a>
+          <a>EXP</a>
+          <a onclick="input.value = eval(input.value)">Ans</a>
+          <a onclick="input.value = eval(input.value)">=</a>
+        </div>
+      </div>
+      <div class="legend">
+        *Partially Completed
+      </div>
+     
+      <div class="lower-part">
+        <input type="text" placeholder="Ex :- green,yellow,black..." class="inpt2">
+        <button class="sub">submit</button>
+      </div>
+
+    </div>
+    
+ 
+    <script>
+      let inpt=document.querySelector('.inpt2')
+      let sub=document.querySelector('.sub')
+      let main=document.querySelector('.main')
+      let yobro =document.querySelector('.yobro')
+
+      sub.addEventListener('click', function(){
+        let cum=inpt.value
+        console.log(cum)
+        main.style.background=`linear-gradient(15deg,${cum})`;
+        main.style.backgroundColor=`${cum}`;
+        inpt.value=''
+      })
+
+     
+     
+    </script>
+
+
+   
+  </body>
+</html>
